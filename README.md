@@ -46,7 +46,7 @@ export default class ContextProvider extends React.Component {
 }
 ```
 
-A few things here warrant discussion before moving on. The `createContext()` statement on line 3 is what initializes Context API for us. In the return of ContextProvider, we are declaring this component’s state as the context global state by setting it to our newly created context’s ‘value’ prop. This is why we must put any globally accessible functions inside of ContextProvider’s state (in this case on the `methods` key). 
+A few things here warrant discussion before moving on. The `createContext()` statement on line three is what initializes Context API for us. In the return of ContextProvider, we are declaring this component’s state as the context global state by setting it to our newly created context’s ‘value’ prop. This is why we must put any globally accessible functions inside of ContextProvider’s state (in this case on the `methods` key). 
 
 Other functions and lifecycle methods (for example, componentDidMount) may be used in ContextProvider class as normal, but they will not be accessible through Context API *unless they are in state*. Lastly, we enable the ability to use the context in any component by wrapping `{this.props.children}’ with AppContext.Provider.
 
