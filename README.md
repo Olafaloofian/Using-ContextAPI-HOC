@@ -1,6 +1,6 @@
 # Using React's Context API with a Higher Order Component
 
-*A step-by-step process of how to set up global state using Context API and higher order components.*
+*A step-by-step process of how to set up global state using Context API and a higher order component.*
 
 ---
 
