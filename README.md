@@ -41,8 +41,8 @@ import React from 'react'
 export const AppContext = React.createContext()
 
 export default class ContextProvider extends React.Component {
-  // Did you know you can shortcut the constructor and super by writing state like this? Try it out if you haven’t!
   state = {
+  // Did you know you can shortcut the constructor and super by writing state like this? Try it out if you haven’t!
     contextKey1 : 'contextValue1',
     contextKey2: 'contextValue2',
     methods: {
@@ -123,13 +123,13 @@ import React from 'react';
 import withContext from 'path/to/Context_HOC'
 
 function SomeComponent (props) {
+  console.log('CONTEXT', props.context)
   // This should log the whole state from ContextProvider.js:
   // {
   //   contextKey1: 'contextValue1',
   //   contextKey2: 'contextValue2',
   //   methods: {updateKey1: function}
   // }
-  console.log('CONTEXT', props.context)
   return (
     <div>
         <div>
