@@ -54,7 +54,7 @@ If you’re new to React, the paragraph above can seem pretty technical. In orde
 
 ---
 
-## Step 3: Create the higher order component
+## Step 3: Create the higher order consumer component
 Next, let’s make a higher order component that will append our global state to a wrapped component’s props. In the same ContextAPI folder you created previously, make a new file called `Context_HOC.js`. This one is a lot less typing but a bit more thinking:
 
 ```javascript
@@ -72,14 +72,14 @@ export default function withContext(Component) {
 }
 ```
 
-In the previous step, the global state was configured with `AppContext.Provider`. We import the same context in this step so we can set up the consumer. The withContext function takes a whole component as its parameter (there’s the higher order!) and returns another function that takes the component’s props as a parameter. This inner function is where the magic happens. 
+In the previous step, the global state was configured with `AppContext.Provider`. We import the same context in this step so we can set up the consumer. The `withContext` function takes a *whole component as its parameter* (there’s the higher order part of this!) and returns another function that takes the *component’s props as a parameter*. This inner function is where the magic happens. 
 
-contextComponent returns our `AppContext`, but this time it’s `AppContext.Consumer`. This tells Context API which component is a consumer (meaning it has access to global state). We make the passed-in `Component` parameter a child of `AppContext.Consumer`, as well as passing it context global state through an arrow function. This context is assigned to a new prop on the component `context={context}`. To make sure the component retains its other props, we give them back with `{...props}`.
+`contextComponent` returns our `AppContext`, but this time we use `AppContext.Consumer`. This tells Context API the wrapped component is a consumer (meaning it has access to global state). Thus, we make the passed-in `Component` parameter a child of `AppContext.Consumer`, as well as passing it context global state through an arrow function. This context is assigned to a new prop on the component `context={context}`. To make sure the component retains its other props, we give them back with `{...props}`.
 
 ---
 
 ## Step 4: Wrap App with ContextProvider
-Phew. Still reading? You’re a champion! There’s only one more setup step required. Head into your `index.js` file to wrap your whole app with ContextProvider:
+Phew. Still reading? You’re a champion! There’s only one more setup step required. Head into your `index.js` file to wrap your whole app with `<ContextProvider>`:
 
 ```javascript
 import React from 'react';
@@ -95,7 +95,7 @@ ReactDOM.render(
 document.getElementById('root'));
 ```
 
-This grants the created context to your whole `<App />`
+This grants the created context to `<App />` and all of its children.
 
 ---
 
@@ -107,7 +107,12 @@ import React from 'react';
 import withContext from 'path/to/Context_HOC'
 
 function SomeComponent (props) {
-  // This should log the whole state from ContextProvider.js
+  // This should log the whole state from ContextProvider.js:
+  // {
+  //   contextKey1: 'contextValue1',
+  //   contextKey2: 'contextValue2',
+  //   methods: {updateKey1: function}
+  // }
   console.log('CONTEXT', props.context)
   return (
     <div>
@@ -136,14 +141,14 @@ function SomeComponent (props) {
 export default withContext(SomeComponent)
 ```
 
-Keep in mind - you need to wrap each component that uses context in `withContext()`. As we discussed before, this is how context is added to `props`.
+Keep in mind - you need to wrap each component that uses context with your higher order component: `withContext()`. As we discussed before, this is how context is added to `props`.
 
 ---
 
 ## Conclusion
-There are many ways to set Context API up, but most other tutorials have you use the consumer to wrap in the return of a component. This works, but what if you need to call a context method in a `componentDidUpdate`? Setting up a higher order component allows you to access context anywhere in the component, not just in the return.
+There are tons of different ways to set Context API up. Most other tutorials have you use the consumer to wrap in the return of a component. This works, but what if you need to call a context method above (like in a `componentDidUpdate`)? Setting up a higher order component allows you to access context anywhere in the component, not just in the return.
 
-Context API is an amazing tool for global state management, and is worth considering adding to any project that needs a centralized pool of data or functions. The sky’s the limit as to what you can use it for - get creative and see what you can make!
+Context API is an amazing tool for global state management, and is worth considering adding to any project that needs a centralized pool of manipulatable data. The sky’s the limit as to what you can use it for - get creative and see what you can make!
 
 
 
