@@ -11,16 +11,16 @@ function SomeComponent (props) {
             <br/>
 
             <div>
-                contextKey1: {props.context.contextKey1}
+                Counter: {props.context.counter}
             </div>
 
             <div>
-                contextKey2: {props.context.contextKey2}
+                Message: {props.context.message}
             </div>
-            
+
             <div>
-                <button onClick={props.context.methods.updateKey1}>
-                    Update Context
+                <button onClick={props.context.incrementCounter}>
+                    Count!
                 </button>
             </div>
         </div>
