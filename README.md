@@ -125,7 +125,7 @@ import withContext from 'path/to/Context_HOC'
 
 function SomeComponent (props) {
   console.log('CONTEXT', props.context)
-  // This should log the whole state from ContextProvider.js:
+  // This should log the object you passed from ContextProvider.js:
   // {
   //   counter: 0,
   //   incrementCounter: function(),
