@@ -4,19 +4,13 @@
 
 ### Table of contents
 
-[Introduction to Context API](https://github.com/Olafaloofian/Using-ContextAPI-HOC#introduction-to-context-api)
-
-[Step 1: Set up Context API folder](https://github.com/Olafaloofian/Using-ContextAPI-HOC#step-1-set-up-context-api-folder)
-
-[Step 2: Make the context provider](https://github.com/Olafaloofian/Using-ContextAPI-HOC#step-2-make-the-context-provider)
-
-[Step 3: Create the higher order consumer component](https://github.com/Olafaloofian/Using-ContextAPI-HOC#step-3-create-the-higher-order-consumer-component)
-
-[Step 4: Wrap App with ContextProvider](https://github.com/Olafaloofian/Using-ContextAPI-HOC#step-4-wrap-app-with-contextprovider)
-
-[Step 5: Testing our work](https://github.com/Olafaloofian/Using-ContextAPI-HOC#step-5-testing-our-work)
-
-[Conclusion](https://github.com/Olafaloofian/Using-ContextAPI-HOC#conclusion)
+* [Introduction to Context API](https://github.com/Olafaloofian/Using-ContextAPI-HOC#introduction-to-context-api)
+* [Step 1: Set up Context API folder](https://github.com/Olafaloofian/Using-ContextAPI-HOC#step-1-set-up-context-api-folder)
+* [Step 2: Make the context provider](https://github.com/Olafaloofian/Using-ContextAPI-HOC#step-2-make-the-context-provider)
+* [Step 3: Create the higher order consumer component](https://github.com/Olafaloofian/Using-ContextAPI-HOC#step-3-create-the-higher-order-consumer-component)
+* [Step 4: Wrap App with ContextProvider](https://github.com/Olafaloofian/Using-ContextAPI-HOC#step-4-wrap-app-with-contextprovider)
+* [Step 5: Testing our work](https://github.com/Olafaloofian/Using-ContextAPI-HOC#step-5-testing-our-work)
+* [Conclusion](https://github.com/Olafaloofian/Using-ContextAPI-HOC#conclusion)
 
 ---
 
