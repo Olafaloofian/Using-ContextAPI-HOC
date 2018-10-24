@@ -24,7 +24,7 @@ It's important to note that Context API allows you to build multiple contexts an
 ---
 
 ## Step 1: Set up Context API folder
-Choose where your Context API files should live in your project’s directory. If you’re using create-react-app, the best place for it is inside the pre-built `src` folder. Navigate to the desired location and create a new folder with an obvious name (example: ‘ContextAPI’ ).
+Choose where your Context API files should live in your project’s directory. If you’re using create-react-app, the best place for it is inside the pre-built `src` folder. Navigate to the desired location and create a new folder with an obvious name (example: 'ContextAPI').
 
 ---
 
