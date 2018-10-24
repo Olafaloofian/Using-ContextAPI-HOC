@@ -159,6 +159,6 @@ If you haven't been typing your own example along the way and want to see this i
 ---
 
 ## Conclusion
-There are tons of different ways to set Context API up. Most other tutorials have you use the consumer to wrap in the return of a component. This works, but what if you need to call a context method earlier (such as in a `componentDidUpdate`)? Setting up a higher order component allows you to access context anywhere in the component, not just in the return. In addition, this configuration creates an easily understood singular global context.
+There are tons of different ways to set Context API up. Most other tutorials have you use the consumer to wrap inside the `render()` method of a component. This works, but what if you need to call a context method earlier (such as in a `componentDidUpdate`)? Setting up a higher order component allows you to access context anywhere in the component, not just in the return. In addition, this configuration creates an easily understood singular global context.
 
 Context API is an amazing tool for global state management, and is worth considering adding to any project that needs a centralized pool of manipulatable data. The sky’s the limit as to what you can use it for - get creative and see what you can make!
